@@ -63,8 +63,8 @@ buildscript {
     }
     apply plugin: 'java'
     mixin {
-        add sourceSets.main, 'csdy.refmap.json'
-        config 'csdy.mixins.json'
+        add sourceSets.main, 'mixins.tconbreakthrough.refmap.json'
+        config 'mixins.tconbreakthrough.json'
         debug.verbose = true
         debug.export = true
     }
@@ -88,13 +88,6 @@ buildscript {
         minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
         annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
         implementation 'org.javassist:javassist:3.28.0-GA'
-
-        //ProjectE
-        implementation fg.deobf("curse.maven:projecte-226410:4901949")
-
-        //MEK
-        implementation fg.deobf("curse.maven:mekanism-generators-268566:6123081")
-        implementation fg.deobf("curse.maven:mekanism-268560:6123077")
 
         implementation fg.deobf("curse.maven:jei-238222:6075247")
 
